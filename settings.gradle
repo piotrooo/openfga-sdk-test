@@ -1,0 +1,3 @@
+rootProject.name = 'openfga-sdk-test'
+
+include 'docker:java-sdk'

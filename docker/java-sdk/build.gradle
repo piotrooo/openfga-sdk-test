@@ -1,0 +1,30 @@
+plugins {
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+}
+
+group 'dev.openfga.sdk.test'
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(21))
+    }
+}
+
+application {
+    mainClass = 'dev.openfga.sdk.test.java.app.App'
+}
+
+dependencies {
+    implementation 'dev.openfga:openfga-sdk:0.8.1'
+    implementation 'io.javalin:javalin:6.7.0'
+    implementation 'org.slf4j:slf4j-simple:2.0.17'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

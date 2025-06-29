@@ -1,1 +1,1 @@
-# openfga-sdk-test
+# openfga-features-test
